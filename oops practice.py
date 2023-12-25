@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import math
 # class Programmer:
 #     company = "Microsoft"
@@ -85,7 +84,7 @@ intercity.fareInfo()
 intercity.bookTicket()
 intercity.getStatus()
 
-=======
+
 import math
 # class Programmer:
 #     company = "Microsoft"
@@ -171,5 +170,3 @@ intercity.getStatus()
 intercity.fareInfo()
 intercity.bookTicket()
 intercity.getStatus()
-
->>>>>>> origin/master
