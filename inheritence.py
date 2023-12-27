@@ -38,3 +38,31 @@ class Programmer(Employee, Freelancer):
 p = Programmer()
 p.upgradeLevel()
 print(p.level)
+
+class Person:
+    country = "India"
+    def  takeBreath(self):
+        print("I am breathing...")
+
+class Employee(Person):
+    company = "Honda"
+
+    def getSalary(self):
+        print(f"I am an Employee so I am luckily breathing...")
+
+class Programmer(Employee):
+    company = "Fiverr"
+
+    def getSalary(self):
+        print(f"No salary to programmer")
+
+    def takeBreath(self):
+        print("I am a programmer so I am breathing++...")
+
+
+p = Person()
+p.takeBreath()
+e = Employee()
+e.takeBreath()
+pr = Programmer()
+pr.takeBreath()
