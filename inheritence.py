@@ -1,21 +1,40 @@
+# class Employee:
+#     company = "Google"
+#
+#     def showDetails(self):
+#         print("This is an employee")
+#
+# class Programmer(Employee):
+#     language = "Python"
+#     # company = "Youtube"
+#
+#     def getLanguage(self):
+#         print(f"The language is {self.language}")
+#     def showDetails(self):
+#         print("This is an programmer")
+#
+# e = Employee()
+# e.showDetails()
+# p = Programmer()
+# p.showDetails()
+# print(p.company)
+
 class Employee:
-    company = "Google"
+    company = "Visa"
+    eCode = 120
 
-    def showDetails(self):
-        print("This is an employee")
 
-class Programmer(Employee):
-    language = "Python"
-    # company = "Youtube"
+class Freelancer:
+    company = "Fiverr"
+    level = 2
 
-    def getLanguage(self):
-        print(f"The language is {self.language}")
-    def showDetails(self):
-        print("This is an programmer")
+    def upgradeLevel(self):
+        self.level = self.level + 1
 
-e = Employee()
-e.showDetails()
+
+class Programmer(Employee, Freelancer):
+    name ="Rohit"
+
 p = Programmer()
-p.showDetails()
-print(p.company)
-
+p.upgradeLevel()
+print(p.level)
