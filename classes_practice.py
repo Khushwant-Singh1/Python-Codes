@@ -157,7 +157,48 @@ print("The result of divide is: ", cal.divide())
 # Design a Bank class that manages multiple BankAccount objects. Include methods to add a new account, display all accounts, and calculate the total balance.
 
 class Bank:
-    pass
+    def __init__(self):
+        self.account = []
+    def add_account(self, account):
+        self.account.append(account)
+    def display_account(self):
+        for account in self.account:
+            print(account.info())
+    def total_balance(self):
+        total = 0
+        for account in self.account:
+            total += account.balance
+        return total
+class BankAccount:
+    def __init__(self, account_number, account_holder, balance):
+        self.account_number = account_number
+        self.account_holder = account_holder
+        self.balance = balance
 
+    def info(self):
+        return (f"Account number: {self.account_number}, Holder: {self.account_holder}, Balance: {self.balance}")
 
+bank = Bank()
+bank.add_account(BankAccount(123, "Bob", 100540))
+bank.add_account(BankAccount(456, "Oggy", 150485))
+print("Displaying all the details...")
+bank.display_account()
+print("The total balance: ", bank.total_balance())
 # Implement a Rectangle class with attributes length and width. Add a method to compare two rectangles based on their area.
+class CompareRectangle:
+    def __init__(self):
+            self.areas = []
+    def area(self, length, breath):
+        self.areas.append(length * breath)
+
+    def compare(self):
+        if(self.areas[0] < self.areas[1]):
+            return f"Second rectangle has larger area"
+        elif(self.areas[0] > self.areas[1]):
+            return f"First rectangle has larger area"
+
+comparator = CompareRectangle()
+
+comparator.area(4, 8)
+comparator.area(5, 10)
+print(comparator.compare())
